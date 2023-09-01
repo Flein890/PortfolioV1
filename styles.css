@@ -183,14 +183,74 @@ main {
   background-color: #070510;
   padding-bottom: 120px;
 }
-#projects h2 {
-  padding: 60px 0 90px 0;
-  font-size: 2.5em;
-  color: #fff;
-  /* background-image: #fff;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text; */
+
+.project-title_container {
+  position: relative;
+  margin: 100px;
+  width: 240px;
+  height: 60px;
+  border-radius: 14px;
+  z-index: 1111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 230px;
+  height: 50px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+  /* outline: 2px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7em;
+  font-weight: 600;
+}
+
+.blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: hsla(29, 92%, 70%, 1);
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
 }
 
 .project-container {
@@ -202,7 +262,7 @@ main {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  box-shadow: 0px 1px 15px 1px #fff;
+  box-shadow: 0px 0px 10px 0px #fff;
   transition: scale 0.5s;
   -webkit-transition: scale 0.5s;
   -moz-transition: scale 0.5s;
@@ -279,7 +339,6 @@ main {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-
   font-weight: 700;
   letter-spacing: 0.05em;
   margin: 0;
@@ -352,7 +411,7 @@ main {
 
 .btn-mail:hover {
   color: white;
-  background: black;
+  background: hsla(29, 92%, 70%, 1);
 }
 
 .btn-mail:hover::before {
