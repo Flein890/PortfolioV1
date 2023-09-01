@@ -1,0 +1,47 @@
+.project-button {
+  position: relative;
+  width: 130px;
+  padding: 10px 45px;
+  background: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 1px solid black;
+  border-radius: 8px;
+  transition: background-color 0.4s;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -ms-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.project-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  -ms-transition: all 250ms;
+  -o-transition: all 250ms;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.project-button:hover::before {
+  width: 100%;
+}
+.project-button:hover {
+  color: #fff;
+}
