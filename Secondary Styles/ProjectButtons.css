@@ -45,3 +45,9 @@
 .project-button:hover {
   color: #fff;
 }
+
+@media (max-width: 576px) {
+  .project-button {
+    width: 100px;
+  }
+}
