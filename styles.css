@@ -277,6 +277,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  text-align: center;
 }
 .project-information h3 {
   font-size: 1.3em;
@@ -313,6 +314,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
+  justify-content: center;
 }
 
 /*====================CONTACT====================¨*/
